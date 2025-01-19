@@ -139,6 +139,5 @@ public class VariableNamesTheme {
         // American standard code for information interchange
         String ascii = "ASCII";
         System.out.println("American standard code for information interchange - " + ascii);
-        
     }
 }
