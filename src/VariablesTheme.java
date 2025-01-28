@@ -3,34 +3,34 @@ package Lesson1;
 public class VariablesTheme {
     public static void main(String[] args) {
         System.out.println("\n1. Вывод характеристик компьютера");
-        byte laptopCoreCount = 6;
-        short laptopRam = 32;
-        int laptopPpi = 144;
-        long laptopSsd = 1000L;
-        char laptopSsdType = 'M';
+        byte CoreCount = 6;
+        short ramCapacity = 32;
+        int refreshRate = 144;
+        long ssdCapacity = 1000L;
+        char ssdType = 'M';
         boolean hasOpticalDrive = false;
-        float laptopFreqCpu = 3.3F;
-        double laptopBluetooth = 5.2;
+        float cpuFrequency = 3.3F;
+        double screenSize = 15.6;
 
-        System.out.println("Количество ядер: " + laptopCoreCount);
-        System.out.println("Объем оперативной памяти: " + laptopRam + "Гб");
-        System.out.println("Максимальная частота обновления экрана: " + laptopPpi + "Гц");
-        System.out.println("Общий объем твердотельных накопителей: " + laptopSsd + "Гб");
-        System.out.println("Тип SSD диска: " + laptopSsdType + ".2" );
+        System.out.println("Количество ядер: " + CoreCount);
+        System.out.println("Объем оперативной памяти: " + ramCapacity + "Гб");
+        System.out.println("Максимальная частота обновления экрана: " + refreshRate + "Гц");
+        System.out.println("Общий объем твердотельных накопителей: " + ssdCapacity + "Гб");
+        System.out.println("Тип SSD диска: " + ssdType + ".2" );
         System.out.println("Оптический привод: " + hasOpticalDrive);
-        System.out.println("Частота процессора: " + laptopFreqCpu + "Ггц");
-        System.out.println("Bluetooth: " + laptopBluetooth);
+        System.out.println("Частота процессора: " + cpuFrequency + "Ггц");
+        System.out.println("Диагональ экрана: " + screenSize);
 
         System.out.println("\n2. Расчет стоимости товара со скидкой");
         float penPrice = 105.5F;
         float bookPrice = 203.83F;
-        float totalPriceProduct = penPrice + bookPrice;
+        float basePrice = penPrice + bookPrice;
         float discountPercent = 0.11F;
-        float discountSum = totalPriceProduct * discountPercent;
-        float discountPriceProduct = totalPriceProduct - discountSum;
-        System.out.println("Стоимость товаров без скидки: " + totalPriceProduct);
+        float discountSum = basePrice * discountPercent;
+        float discountPrice = basePrice - discountSum;
+        System.out.println("Стоимость товаров без скидки: " + basePrice);
         System.out.println("Сумма скидки: " + discountSum + "%");
-        System.out.println("Стоимость товаров со скидкой: " + discountPriceProduct);
+        System.out.println("Стоимость товаров со скидкой: " + discountPrice);
 
         System.out.println("\n3. Вывод слова JAVA");
         System.out.println("    J    a  v     v  a");
@@ -39,28 +39,28 @@ public class VariablesTheme {
         System.out.println("  JJ  a     a  V  a     a");
 
         System.out.println("\n4. Вывод min и max значений целых числовых типов");
-        byte maxValueOfByteType = 127;
-        short maxValueOfShortType = 32767;
-        int maxValueOfIntType = 2147483647;
-        long maxValueOfLongType = 9223372036854775807L;
+        byte extremesByteValue = 127;
+        short extremesShortValue = 32767;
+        int extremesIntValue = 2147483647;
+        long extremesLongValue = 9223372036854775807L;
         char sign = '\uFFFF';
-        int maxValueOfCharType = (int) sign;
+        int extremesCharValue = (int) sign;
 
-        System.out.println(maxValueOfByteType);
-        System.out.println(++maxValueOfByteType);
-        System.out.println(--maxValueOfByteType);
-        System.out.println(maxValueOfShortType);
-        System.out.println(++maxValueOfShortType);
-        System.out.println(--maxValueOfShortType);
-        System.out.println(maxValueOfIntType);
-        System.out.println(++maxValueOfIntType);
-        System.out.println(--maxValueOfIntType);
-        System.out.println(maxValueOfLongType);
-        System.out.println(++maxValueOfLongType);
-        System.out.println(--maxValueOfLongType);
-        System.out.println(maxValueOfCharType);
-        System.out.println(++maxValueOfCharType);
-        System.out.println(--maxValueOfCharType);
+        System.out.println(extremesByteValue);
+        System.out.println(++extremesByteValue);
+        System.out.println(--extremesByteValue);
+        System.out.println(extremesShortValue);
+        System.out.println(++extremesShortValue);
+        System.out.println(--extremesShortValue);
+        System.out.println(extremesIntValue);
+        System.out.println(++extremesIntValue);
+        System.out.println(--extremesIntValue);
+        System.out.println(extremesLongValue);
+        System.out.println(++extremesLongValue);
+        System.out.println(--extremesLongValue);
+        System.out.println(extremesCharValue);
+        System.out.println(++extremesCharValue);
+        System.out.println(--extremesCharValue);
 
         System.out.println("\n5. Перестановка значений переменных");
         System.out.println("\nС помощью третьей переменной:");
@@ -109,7 +109,7 @@ public class VariablesTheme {
         System.out.println("   " + slash + "  " + backslash);
         System.out.println("  " + slash + underscore + leftBracket + " " + rightBracket + backslash);
         System.out.println(" " + slash + "      " + backslash);
-        System.out.print("" + slash + underscore + "" + underscore + "" + underscore + "" + underscore +
+        System.out.print("" + slash + underscore +  underscore +  underscore + underscore +
                 slash + backslash + underscore + underscore + backslash);
 
         System.out.println("\n\n8. Манипуляции с сотнями, десятками и единицами числа");
