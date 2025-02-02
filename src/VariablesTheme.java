@@ -43,8 +43,7 @@ public class VariablesTheme {
         short extremesShortValue = 32767;
         int extremesIntValue = 2147483647;
         long extremesLongValue = 9223372036854775807L;
-        char sign = '\uFFFF';
-        int extremesCharValue = (int) sign;
+        int extremesCharValue = '\uFFFF';
 
         System.out.println(extremesByteValue);
         System.out.println(++extremesByteValue);
