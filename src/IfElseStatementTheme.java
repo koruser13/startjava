@@ -67,7 +67,7 @@ public class IfElseStatementTheme {
         }
 
         System.out.println("\n4. Поиск одинаковых цифр в числах");
-        int num1 = 123;
+        int num1 = 223;
         int num2 = 123;
 
         int hundredsOfNum1 = num1 / 100;
@@ -89,6 +89,8 @@ public class IfElseStatementTheme {
             } else if (onesOfNum1 == onesOfNum2) {
                 System.out.println("Одинаковые цифры: " + onesOfNum1 + ", " + onesOfNum2);
                 System.out.println("Единицы равны");
+            } else {
+                System.out.println("Равных цифр нет");
             }
         } else {
             System.out.println("Все цифры равны");
