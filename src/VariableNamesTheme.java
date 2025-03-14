@@ -1,5 +1,3 @@
-package Lesson1;
-
 public class VariableNamesTheme {
     public static void main(String[] args) {
         System.out.println("\n1. Разные переменные");
@@ -127,8 +125,8 @@ public class VariableNamesTheme {
         System.out.println("Компьютер включен? " + isOnComputer);
 
         // Есть равные цифры?
-        boolean isEqualDigits = true;
-        System.out.println("Есть равные цифры? " + isEqualDigits);
+        boolean hasEqualDigits = true;
+        System.out.println("Есть равные цифры? " + hasEqualDigits);
 
         // Создано?
         boolean isCreated = false;
