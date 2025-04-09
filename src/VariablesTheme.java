@@ -1,7 +1,7 @@
 public class VariablesTheme {
     public static void main(String[] args) {
         System.out.println("\n1. Вывод характеристик компьютера");
-        byte CoreCount = 6;
+        byte coreCount = 6;
         short ramCapacity = 32;
         int refreshRate = 144;
         long ssdCapacity = 1000L;
@@ -10,11 +10,11 @@ public class VariablesTheme {
         float cpuFrequency = 3.3F;
         double screenSize = 15.6;
 
-        System.out.println("Количество ядер: " + CoreCount);
+        System.out.println("Количество ядер: " + coreCount);
         System.out.println("Объем оперативной памяти: " + ramCapacity + "Гб");
         System.out.println("Максимальная частота обновления экрана: " + refreshRate + "Гц");
         System.out.println("Общий объем твердотельных накопителей: " + ssdCapacity + "Гб");
-        System.out.println("Тип SSD диска: " + ssdType + ".2" );
+        System.out.println("Тип SSD диска: " + ssdType + ".2");
         System.out.println("Оптический привод: " + hasOpticalDrive);
         System.out.println("Частота процессора: " + cpuFrequency + "Ггц");
         System.out.println("Диагональ экрана: " + screenSize);
@@ -41,7 +41,7 @@ public class VariablesTheme {
         short extremesShortValue = 32767;
         int extremesIntValue = 2147483647;
         long extremesLongValue = 9223372036854775807L;
-        int extremesCharValue = '\uFFFF';
+        int extremesCharValue = Character.MAX_VALUE;
 
         System.out.println(extremesByteValue);
         System.out.println(++extremesByteValue);
@@ -106,7 +106,7 @@ public class VariablesTheme {
         System.out.println("   " + slash + "  " + backslash);
         System.out.println("  " + slash + underscore + leftBracket + " " + rightBracket + backslash);
         System.out.println(" " + slash + "      " + backslash);
-        System.out.print("" + slash + underscore +  underscore +  underscore + underscore +
+        System.out.print("" + slash + underscore + underscore + underscore + underscore +
                 slash + backslash + underscore + underscore + backslash);
 
         System.out.println("\n\n8. Манипуляции с сотнями, десятками и единицами числа");
@@ -117,7 +117,7 @@ public class VariablesTheme {
         int digitSum = hundreds + tens + ones;
         int digitProduct = hundreds * tens * ones;
 
-        System.out.println("Число " + number  + " содержит:");
+        System.out.println("Число " + number + " содержит:");
         System.out.println("  сотен - " + hundreds);
         System.out.println("  десятков - " + tens);
         System.out.println("  единиц - " + ones);

@@ -136,7 +136,7 @@ public class VariableNamesTheme {
         boolean isEmpty = true;
         System.out.println("Пустое? " + isEmpty);
 
-        // Aктивное?
+        // Активное?
         boolean isActive = false;
         System.out.println("Aктивное? " + isActive);
 
@@ -159,7 +159,7 @@ public class VariableNamesTheme {
         System.out.println("Старый universally unique identifier: " + oldUuid);
 
         // Производитель оперативной памяти
-        String ramManufacturer = "Hynix";
+        String ramManufacturer = "Samsung";
         System.out.println("Производитель оперативной памяти - " + ramManufacturer);
 
         // Емкость жесткого диска
