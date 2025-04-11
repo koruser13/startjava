@@ -1,147 +1,144 @@
 public class CyclesTheme {
     public static void main(String[] args) {
-        System.out.println("\n1. Подсчет суммы четных и нечетных чисел");
+        System.out.println("\n1. ПОДСЧЕТ СУММЫ ЧЕТНЫХ И НЕЧЕТНЫХ ЧИСЕЛ");
 
-        int initialNum = -10;
-        int initialNumCopy = initialNum;
-        int endNum = 21;
+        int startRange = -10;
+        int counter = startRange;
+        int endRange = 21;
         int evenSum = 0;
         int oddSum = 0;
 
         do {
-            if (initialNumCopy % 2 == 0) {
-                evenSum += initialNumCopy;
+            if (counter % 2 == 0) {
+                evenSum += counter;
             } else {
-                oddSum += initialNumCopy;
+                oddSum += counter;
             }
-            initialNumCopy++;
-        } while (initialNumCopy <= endNum);
-        System.out.println("В отрезке [" + initialNum + ", " + endNum + "] " +
+            counter++;
+        } while (counter <= endRange);
+        System.out.println("В отрезке [" + startRange + ", " + endRange + "] " +
                 "сумма четных чисел = " + evenSum + ", а нечетных = " + oddSum);
 
-        System.out.println("\n2. Вывод чисел между min и max в порядке убывания");
+        System.out.println("\n2. ВЫВОД ЧИСЕЛ МЕЖДУ MIN И MAX В ПОРЯДКЕ УБЫВАНИЯ");
 
-        int number1 = 10;
-        int number2 = 5;
-        int number3 = -1;
-        int max = number1;
-        int min = number3;
+        int num1 = 10;
+        int num2 = 5;
+        int num3 = -1;
+        int maxNum = num1;
+        int minNum = num3;
 
-        if (number2 > max) {
-            max = number2;
+        if (num2 > maxNum) {
+            maxNum = num2;
         }
-        if (number3 > max) {
-            max = number3;
+        if (num3 > maxNum) {
+            maxNum = num3;
         }
-        if (number1 < min) {
-            min = number1;
+        if (num1 < minNum) {
+            minNum = num1;
         }
-        if (number2 < min) {
-            min = number2;
-        }
-
-        System.out.println("Максимальное число " + max);
-        System.out.println("Минимальное число " + min);
-
-        for (max--; max > min; max--) {
-            System.out.print(max + " ");
+        if (num2 < minNum) {
+            minNum = num2;
         }
 
-        System.out.println("\n\n3. Вывод реверсивного числа и суммы его цифр");
+        System.out.println("Максимальное число " + maxNum);
+        System.out.println("Минимальное число " + minNum);
 
-        int someNum = 1234;
+        for (maxNum--; maxNum > minNum; maxNum--) {
+            System.out.print(maxNum + " ");
+        }
+
+        System.out.println("\n\n3. ВЫВОД РЕВЕРСИВНОГО ЧИСЛА И СУММЫ ЕГО ЦИФР");
+
+        int initialNum = 1234;
         int digitSum = 0;
 
-        while (someNum > 0) {
-            digitSum += someNum % 10;
-            int digit = someNum % 10;
-            someNum /= 10;
+        while (initialNum > 0) {
+            int digit = initialNum % 10;
+            digitSum += digit;
+            initialNum /= 10;
             System.out.print(digit);
         }
         System.out.println("\nСумма выделенных цифр " + digitSum);
 
         System.out.println("\n4. ВЫВОД ЧИСЕЛ В НЕСКОЛЬКО СТРОК");
 
-        int startNum = 1;
-        int finishNum = 24;
-        int num = 0;
-        for (int i = startNum; i < finishNum; i++) {
+        startRange = 1;
+        endRange = 24;
+        counter = 0;
+        for (int i = startRange; i < endRange; i++) {
             if (i % 2 != 0) {
                 System.out.printf("%3d", i);
-                num++;
-                if (num % 5 == 0) {
+                counter++;
+                if (counter % 5 == 0) {
                     System.out.println();
                 }
             }
         }
-        while (num % 5 != 0) {
+        while (counter % 5 != 0) {
             System.out.printf("%3d", 0);
-            num++;
+            counter++;
         }
 
         System.out.println("\n\n5. ПРОВЕРКА КОЛИЧЕСТВА ДВОЕК ЧИСЛА НА ЧЕТНОСТЬ/НЕЧЕТНОСТЬ");
 
-        int originalNum = 32425922;
+        int originalNum = 3242592;
         int currentNum = originalNum;
-        int count2 = 0;
-        String parity;
+        int twosNum = 0;
 
-        while (currentNum > count2) {
+        while (currentNum > twosNum) {
             if ((currentNum % 10) == 2) {
-                count2++;
+                twosNum++;
             }
             currentNum /= 10;
         }
 
-        if (count2 % 2 == 0) {
-            parity = "четное";
-        } else {
+        String parity = "четное";
+
+        if (twosNum % 2 != 0) {
             parity = "нечетное";
         }
-        System.out.println("В " + originalNum + " " + parity + " (" + count2 + ") " + "количество двоек");
+        System.out.println("В " + originalNum + " " + parity + " (" + twosNum + ") " + "количество двоек");
 
         System.out.println("\n6. ВЫВОД ГЕОМЕТРИЧЕСКИХ ФИГУР");
 
-        int row = 5;
-        int column = 10;
+        int cols = 5;
+        int rows = 10;
 
-        for (int j = 0; j < row; j++) {
-            for (int k = 0; k < column; k++) {
+        for (int i = 0; i < cols; i++) {
+            for (int j = 0; j < rows; j++) {
                 System.out.print("*");
             }
             System.out.println();
         }
         System.out.println();
 
-        int counter1 = 5;
-
-        while (counter1 >= 1) {
-            int counter2 = 1;
-            while (counter2 <= counter1) {
+        while (cols >= 1) {
+            rows = 1;
+            while (rows <= cols) {
                 System.out.print("#");
-                counter2++;
+                rows++;
             }
             System.out.println();
-            counter1--;
+            cols--;
         }
         System.out.println();
 
-        int height = 5;
-        int counter = 0;
+        cols = 5;
+        counter = 0;
 
         do {
-            int counter2 = 0;
+            rows = 0;
             do {
                 if (counter > 2) {
-                    counter2++;
+                    rows++;
                 }
                 if (counter > 3) {
-                    counter2 -= 2;
+                    rows -= 2;
                 }
                 System.out.print("$");
-            } while (++counter2 <= counter && counter2 > 0);
+            } while (++rows <= counter && rows > 0);
             System.out.println();
-        } while (++counter < height);
+        } while (++counter < cols);
 
         System.out.println("\n7. ВЫВОД ASCII-СИМВОЛОВ\n");
 
@@ -153,27 +150,27 @@ public class CyclesTheme {
         for (char j = startSign; j <= endSign; j++) {
             if (j % 2 != 0) {
                 if (j >= 33 && j < 48) {
-                    System.out.printf("%18d%12s\t\t\t\t%-5s%n", (int) j, j, Character.getName(j));
+                    System.out.printf("%18d%12s\t\t\t   %-5s%n", (int) j, j, Character.getName(j));
                 }
             } else {
                 if (j >= 97 && j < 123) {
-                    System.out.printf("%18d%12s%34s%n", (int) j, j, Character.getName(j));
+                    System.out.printf("%18d%12s%33s%n", (int) j, j, Character.getName(j));
                 }
             }
         }
 
         System.out.println("\n8. ПРОВЕРКА, ЯВЛЯЕТСЯ ЛИ ЧИСЛО ПАЛИНДРОМОМ");
 
-        int originalNumber = 1234321;
-        int checkedNum = originalNumber;
+        initialNum = 1234321;
+        currentNum = initialNum;
         int reversedNum = 0;
 
-        while (checkedNum > 0) {
-            int digit = checkedNum % 10;
+        while (currentNum > 0) {
+            int digit = currentNum % 10;
             reversedNum = reversedNum * 10 + digit;
-            checkedNum /= 10;
+            currentNum /= 10;
         }
-        if (originalNumber == reversedNum) {
+        if (initialNum == reversedNum) {
             System.out.println("Число " + reversedNum + " - палиндром");
         } else {
             System.out.println("Число " + reversedNum + " - не палиндром");
@@ -181,11 +178,11 @@ public class CyclesTheme {
 
         System.out.println("\n9. ПРОВЕРКА, ЯВЛЯЕТСЯ ЛИ ЧИСЛО СЧАСТЛИВЫМ");
 
-        int origNum = 123321;
+        initialNum = 123321;
         int firstHalfSum = 0;
         int secondHalfSum = 0;
-        int firstHalfNum = origNum / 1000;
-        int secondHalfNum = origNum % 1000;
+        int firstHalfNum = initialNum / 1000;
+        int secondHalfNum = initialNum % 1000;
         int firstHalfNumCopy = firstHalfNum;
         int secondHalfCopy = secondHalfNum;
 
@@ -197,9 +194,9 @@ public class CyclesTheme {
         }
 
         if (firstHalfSum == secondHalfSum) {
-            System.out.println("Число " + origNum + " - счастливое");
+            System.out.println("Число " + initialNum + " - счастливое");
         } else {
-            System.out.println("Число " + origNum + " - несчастливое");
+            System.out.println("Число " + initialNum + " - несчастливое");
         }
         System.out.println("Сумма цифр " + firstHalfNum + " = " + firstHalfSum);
         System.out.println("Сумма цифр " + secondHalfNum + " = " + secondHalfSum);
