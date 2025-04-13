@@ -1,31 +1,25 @@
 public class Calculator {
     public static void main(String[] args) {
-        String plusSign = "+";
-        String minusSign = "-";
-        String asteriskSign = "*";
-        String slashSign = "/";
-        String caretSign = "^";
-        String percentSign = "%";
         int firstNum = 2;
         String sign = "^";
         int secondNum = 3;
         int result = 1;
 
-        if (sign.equals(plusSign)) {
+        if (sign.equals("+")) {
             result = firstNum + secondNum;
-        } else if (sign.equals(minusSign)) {
+        } else if (sign.equals("-")) {
             result = firstNum - secondNum;
-        } else if (sign.equals(asteriskSign)) {
+        } else if (sign.equals("*")) {
             result = firstNum * secondNum;
-        } else if (sign.equals(slashSign)) {
+        } else if (sign.equals("/")) {
             result = firstNum / secondNum;
-        } else if (sign.equals(percentSign)) {
+        } else if (sign.equals("%")) {
             result = firstNum % secondNum;
-        }
-
-        for (int i = secondNum; i != 0; i--) {
-            if (sign.equals(caretSign)) {
-                result *= firstNum;
+        } else {
+            for (int i = secondNum; i != 0; i--) {
+                if (sign.equals("^")) {
+                    result *= firstNum;
+                }
             }
         }
         System.out.println(firstNum + " " + sign + " " + secondNum + " = " + result);
