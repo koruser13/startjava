@@ -142,19 +142,19 @@ public class CyclesTheme {
 
         System.out.println("\n7. ВЫВОД ASCII-СИМВОЛОВ\n");
 
-        char startSign = 0;
-        char endSign = 127;
+        int startSign = 0;
+        int endSign = 127;
 
         System.out.printf("%21s%13s%15s%n", "DECIMAL", "CHARACTER", "DESCRIPTION");
 
-        for (char j = startSign; j <= endSign; j++) {
-            if (j % 2 != 0) {
-                if (j >= 33 && j < 48) {
-                    System.out.printf("%18d%12s\t\t\t   %-5s%n", (int) j, j, Character.getName(j));
+        for (int i = startSign; i <= endSign; i++) {
+            if (i % 2 != 0) {
+                if (i >= 33 && i < 48) {
+                    System.out.printf("%18d%12s\t\t\t   %-5s%n", i, (char) i, Character.getName(i));
                 }
             } else {
-                if (j >= 97 && j < 123) {
-                    System.out.printf("%18d%12s%33s%n", (int) j, j, Character.getName(j));
+                if (i >= 97 && i < 123) {
+                    System.out.printf("%18d%12s%33s%n", i, (char) i, Character.getName(i));
                 }
             }
         }
