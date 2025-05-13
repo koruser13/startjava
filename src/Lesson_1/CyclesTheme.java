@@ -145,16 +145,16 @@ public class CyclesTheme {
         int startSign = 0;
         int endSign = 127;
 
-        System.out.printf("%21s%13s%15s%n", "DECIMAL", "CHARACTER", "DESCRIPTION");
+        System.out.printf("%15s%12s\t  %-11s%n", "DECIMAL", "CHARACTER", "DESCRIPTION");
 
         for (int i = startSign; i <= endSign; i++) {
             if (i % 2 != 0) {
                 if (i >= 33 && i < 48) {
-                    System.out.printf("%18d%12s\t\t\t   %-5s%n", i, (char) i, Character.getName(i));
+                    System.out.printf("%12d%11s\t\t\t   %-11s%n", i, (char) i, Character.getName(i));
                 }
             } else {
                 if (i >= 97 && i < 123) {
-                    System.out.printf("%18d%12s%33s%n", i, (char) i, Character.getName(i));
+                    System.out.printf("%12d%11s\t\t\t   %-11s%n", i, (char) i, Character.getName(i));
                 }
             }
         }
