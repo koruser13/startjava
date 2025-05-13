@@ -5,23 +5,23 @@ public class Person {
     double weight = 1.8;
     int age = 25;
 
-    public void canWalk() {
+    public void walk() {
         System.out.println("Человек может ходить");
     }
 
-    public void canSit() {
+    public void sit() {
         System.out.println("Человек может сидеть");
     }
 
-    public void canRun() {
+    public void run() {
         System.out.println("Человек может бежать");
     }
 
-    public void canTalk() {
+    public void talk() {
         System.out.println("Человек может говорить");
     }
 
-    public void canLearnJava() {
+    public void learnJava() {
         System.out.println("Человек может учить Java");
     }
 }
