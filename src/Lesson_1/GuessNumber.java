@@ -5,6 +5,7 @@ public class GuessNumber {
         Scanner scan = new Scanner(System.in);
         int attemptNum = 5;
         int randomNum = 50;
+        String result;
 
         System.out.println("Введите число от 1 до 100");
         System.out.println("У вас есть " + attemptNum + " попыток");
@@ -14,11 +15,11 @@ public class GuessNumber {
             if (randomNum == guessedNum) {
                 System.out.println("Вы победили!");
                 break;
-            } else if (guessedNum > randomNum) {
-                System.out.println(guessedNum + " больше того, что загадал компьютер");
-            } else {
-                System.out.println(guessedNum + " меньше того, что загадал компьютер");
             }
+            result = guessedNum > randomNum ? guessedNum + " больше того, что загадал компьютер" :
+                    guessedNum + " меньше того, что загадал компьютер";
+            System.out.println(result);
         }
     }
 }
+
